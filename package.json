@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rafaleo06-web/movies-app-db/issues"
   },
-  "homepage": "https://github.com/rafaleo06-web/movies-app-db#readme"
+  "homepage": "https://github.com/rafaleo06-web/movies-app-db#readme",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
