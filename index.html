@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- NAV TOP --->
+      <header class="header-container">
+        <h1>MY MOVIES DB</h1>
+        <nav class="header-container--nav">
+          <li class="liHome">Home</li>
+          <li class="liTreding">Trending Movies</li>
+          <li class="liTopRated">Top Rated</li>
+          <li class="liPopular">Popular</li>
+          <li class="liUpcoming">Upcoming</li>
+        </nav>
+        <div class="header-container--search">
+          <input placeholder="Search" type="text" />
+          <img class="btnSearch" src="./img/icons8-búsqueda.svg" alt="" />
+        </div>
+      </header>
+
+      <!-- MOVIE[0] PORTADA --->
+      <section class="section-moviePortada " id="moviePortada">
+        <!--IMAGEN BACKGROUND-->
+
+        <div class="section-moviePortada--info">
+          <section class="buttons-moviePortada">
+            <p class="movieOverage"></p>
+            <p class="movieTime">1h 55m</p>
+            <button class="movieNameCategory">Top Rated</button>
+          </section>
+
+          <h2 class="movieTitlePortada"></h2>
+          <p class="movieDesciptions"></p>
+          <div class="buttonsPlayInfo">
+            <button class="btnPlay">PLAY TRAILER</button>
+            <button class="btnInfo"><img src="./img/icons8-información.svg" style="margin-right: 5px;" alt="">DETAILS</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRENDING SCROLL --->
+      <section class="section-movieCategory movieCategoryGeneric" id="container-trending">
+        <div class="section-movieCategory--name">
+          <h2 class="title-categoryView">Trending</h2>
+          <button class="btnShowTrending">SEE ALL</button>
+        </div>
+        <div class="section-movieCategory--scroll trendingPreview">
+          <!-- <article class="movieCategory--imgName">
+            <img src="./img/image6.png" alt="">
+          </article> -->
+        </div>
+      </section>
+
+      <!-- CATEGORIES BUTTONS --->
+      <section class="section-movieCategory movieCategoryGeneric" id="onlyCategoriesName">
+        <h2 class="title-categoryView">Categories</h2>
+        <div class="section-movieCategory--buttonsName">
+          <!-- <button id="id28" class="category-title">Action</button> -->
+        </div>
+      </section>
+
+      <!-- POPULAR SCROLL --->
+      <section class="section-movieCategory movieCategoryGeneric" id="container-popular">
+        <div class="section-movieCategory--name">
+          <h2 class="title-categoryView">Popular</h2>
+          <button class="btnShowPopular">SEE ALL</button>
+        </div>
+        <div class="section-movieCategory--scroll popularPreview">
+          <!-- <article class="movieCategory--imgName">
+            <img src="./img/imag4.png" alt="">
+          </article> -->
+        </div>
+      </section>
+
+      <!-- UPCOMING SCROLL --->     
+      <section class="section-movieCategory movieCategoryGeneric" id="container-upcoming">
+        <div class="section-movieCategory--name">
+          <h2 class="title-categoryView">Upcoming</h2>
+          <button class="btnShowUpcoming">SEE ALL</button>
+        </div>
+        <div class="section-movieCategory--scroll upcomingPreview">
+          <!-- <article class="movieCategory--imgName">
+            <img src="./img/image8.png" alt="">
+          </article> -->
+        </div>
+      </section>
+
+      <!-- GENERIC-LIST SEARCH AND CATEGORY --->     
+      <section id="genericList" class="genericList-container inactive">
+        <div class="titleAndBack">
+          <h2 class="title-categoryView titleGenericList"></h2>
+          <button class="btnBack">Go back</button>
+        </div>
+        <div class="genericList-articles">
+          <!-- <article class="movieCategory--imgName">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            /> -->
+          </article>
+        </div>
+      </section>
+
+      <!-- MOVIE DETAILS--->     
+      <section id="movieDetail" class="movieDetail-container inactive">
+        <div class="movieDetail-infoContainer">
+          <img class="imgMovieDetail" src="./img/image1.png" alt="" />
+
+          <section class="movieDetail-overageTitleOverview">
+            <div class="movieDetail-firstInfo">
+              <p class="movieDetail-score"></p>
+              <p class="movieTime">1h 55m</p>
+            </div>
+            <h2 class="movieDetail-title"></h2>
+            <p class="movieDetail-description"></p>
+            <button class="btnPlay">PLAY TRAILER</button>
+          </section>
+        </div>
+
+        <section class="section-movieCategory" id="onlyCategoriesName">
+          <h2 class="title-categoryView">Categories</h2>
+          <div class="section-movieCategory--buttonsName buttonsNameContainer">
+            <!-- <button id="id28" class="category-title">Action</button> -->
+          </div>
+        </section>
+
+        <article class="relatedMovies-container">
+          <h2 class="relatedMovies-title">Películas similares</h2>
+
+          <div class="section-movieCategory--scroll relatedMovies-scrollContainer">
+            <!-- <article class="movieCategory--imgName">
+              <img
+                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                class="movie-img"
+                alt="Nombre de la película"
+              />
+            </article> -->
+
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <h3>© All rights reserved | Rafael Salirrosas 2023</h3>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./src/secret.js"></script>
+  <script src="./src/node.js"></script>
+  <script src="./src/main.js"></script>
+  <script src="./src/navigation.js"></script>
+</html>
