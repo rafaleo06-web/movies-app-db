@@ -46,6 +46,10 @@ button{
   width: 50%;
   justify-content: space-between;
 }
+.titleLogo{
+  cursor: pointer;
+}
+
 .header-container--search {
   display: flex;
   align-content: center;
@@ -181,7 +185,7 @@ li {
   border-radius: 6px;
   padding: 5px 15px;
 }
-.section-movieCategory--scroll {
+.section-movieCategory--scroll, .liked-articles {
   display: flex;
   width: 100%;
   justify-content: start;
@@ -189,18 +193,21 @@ li {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-
 }
-.section-movieCategory--scroll::-webkit-scrollbar{
+.liked-container h2{
+  font-family: var(--font-family-titles2);
+  font-weight: var(--font-weight-title1);
+}
+.section-movieCategory--scroll::-webkit-scrollbar, .liked-articles::-webkit-scrollbar{
   width: 8px; /* ancho de la barra de desplazamiento */
   height: 8px; /* altura de la barra de desplazamiento */
 }
-.section-movieCategory--scroll::-webkit-scrollbar-thumb {
+.section-movieCategory--scroll::-webkit-scrollbar-thumb, .liked-articles::-webkit-scrollbar-thumb {
   background-color: var(--red-claro); /* color del "pulgar" de la barra de desplazamiento */
   border-radius: 8px; /* borde redondeado del "pulgar" */
 }
 
-.section-movieCategory--scroll::-webkit-scrollbar-track {
+.section-movieCategory--scroll::-webkit-scrollbar-track, .liked-articles::-webkit-scrollbar-track {
   background-color: var(--negro-claro); /* color del fondo de la barra de desplazamiento */
   border-radius: 8px; /* borde redondeado de la pista */
 }
@@ -245,9 +252,10 @@ li {
 }
 .movieCategory--imgName {
   margin-right: 15px;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 15px;
   cursor: pointer;
+  position: relative;
 }
 .titleAndBack{
   width: 100%;
@@ -276,7 +284,10 @@ li {
 }
 .movieCategory--imgName img {
   width: 160px;
+  height: 230px;
   border-radius: 10px;
+  min-height: 220px;
+
 }
 section.section-movieCategory ~ section.section-movieCategory {
   margin: 60px 0;
@@ -317,6 +328,26 @@ section.section-movieCategory ~ section.section-movieCategory {
   margin-right: 15px;
   margin-top: 15px;
 }
+.movie-btn{
+  background-color: var(--negro-claro);
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  position: absolute;
+  border: none;
+  top: 5px;
+  left: 5px;
+
+}
+.movie-btn::before{
+  content: '🤍' ;
+  font-size: 15px;
+}
+.movie-btn--liked::before{
+  content: '❤️';
+  font-size: 16px;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -329,6 +360,21 @@ footer h3 {
   font-weight: var(--font-weight-title2);
   font-size: 16px;
 }
+
+#language-select {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  width: 40px;
+  border-radius: 5px;
+  color: #333;
+}
+
+#language-select option {
+  font-size: 16px;
+  color: #333;
+}
+
 .inactive{
   display: none;
 }
@@ -356,9 +402,7 @@ footer h3 {
   .header-container--nav {
     display: none;
   }
-  .movieCategory--imgName img {
-    width: 120px;
-  }
+
   /* .section-movieCategory--name button {
     font-size: 14px;
 
@@ -471,13 +515,6 @@ footer h3 {
   .buttonsPlayInfo{
     display: flex;
     justify-content: center;
-  }
-  .section-moviePortada {
-
-    background-image: linear-gradient(to left, rgb(0 0 0 / 0%), rgba(0, 0, 0, 0)),
-      url(../img/image1-1.png);
-    /* background-image: url(../img/image1-1.png); */
-
   }
   .buttons-moviePortada{
     display: flex;

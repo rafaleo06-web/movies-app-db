@@ -9,6 +9,7 @@ const genericList_container = document.querySelector('.genericList-container');
 const movieDetail_container = document.querySelector('.movieDetail-container');
 const movieCategoryGeneric = document.querySelector('.movieCategoryGeneric');
 const section_moviePortada = document.querySelector('.section_moviePortada');
+const section_liked_container = document.querySelector('.liked-container');
 
 
 // Lists & Containers
@@ -18,6 +19,11 @@ const movieDetailCategoriesList = document.querySelector('#onlyCategoriesName .s
 const relatedMoviesContainer = document.querySelector('.relatedMovies-scrollContainer');
 const genericListArticles = document.querySelector('.genericList-articles');
 const buttonsNameContainer = document.querySelector('#onlyCategoriesName .buttonsNameContainer');
+const trendingPreview = document.querySelector('.trendingPreview');
+const popularPreview = document.querySelector('.popularPreview');
+const upcomingPreview = document.querySelector('.upcomingPreview');
+const liked_articles = document.querySelector('.liked-articles');
+
 
 // Elements
 const btnBack = document.querySelector('.titleAndBack .btnBack');
@@ -48,5 +54,21 @@ const liTreding = document.querySelector('.liTreding');
 const liTopRated = document.querySelector('.liTopRated');
 const liPopular = document.querySelector('.liPopular');
 const liUpcoming = document.querySelector('.liUpcoming');
+
+const titleLogo = document.querySelector('.titleLogo');
+const language_Select = document.querySelector('#language-select');
+// const option = language_Select.querySelector('option[value="en"]');
+
+const titleTrending = document.querySelector('.titleTrending');
+const moreTrending = document.querySelector('.moreTrending');
+const titlePopular = document.querySelector('.titlePopular');
+const morePopular = document.querySelector('.morePopular');
+const titleUpcoming = document.querySelector('.titleUpcoming');
+const moreUpcoming = document.querySelector('.moreUpcoming');
+const likedTitle = document.querySelector('.liked-title');
+const btnCategories = document.querySelector('.btnCategories');
+
+const btnPlay = document.querySelector('.btnPlay');
+const btnInfo = document.querySelector('.btnInfo');
 
 

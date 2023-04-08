@@ -17,7 +17,7 @@
     <main class="main-container">
       <!-- NAV TOP --->
       <header class="header-container">
-        <h1>MY MOVIES DB</h1>
+        <h1 class="titleLogo">MOVIES DB</h1>
         <nav class="header-container--nav">
           <li class="liHome">Home</li>
           <li class="liTreding">Trending Movies</li>
@@ -25,6 +25,12 @@
           <li class="liPopular">Popular</li>
           <li class="liUpcoming">Upcoming</li>
         </nav>
+        <select id="language-select">
+          <option value="fr">🇫🇷</option>
+          <option value="es-ES">🇪🇸</option>
+          <option value="en" selected>🇺🇸</option>
+          <option value="pt-BR">🇧🇷</option>
+        </select>
         <div class="header-container--search">
           <input placeholder="Search" type="text" />
           <img class="btnSearch" src="./img/icons8-búsqueda.svg" alt="" />
@@ -54,8 +60,8 @@
       <!-- TRENDING SCROLL --->
       <section class="section-movieCategory movieCategoryGeneric" id="container-trending">
         <div class="section-movieCategory--name">
-          <h2 class="title-categoryView">Trending</h2>
-          <button class="btnShowTrending">SEE ALL</button>
+          <h2 class="title-categoryView titleTrending">Trending</h2>
+          <button class="btnShowTrending moreTrending">SEE ALL</button>
         </div>
         <div class="section-movieCategory--scroll trendingPreview">
           <!-- <article class="movieCategory--imgName">
@@ -66,7 +72,7 @@
 
       <!-- CATEGORIES BUTTONS --->
       <section class="section-movieCategory movieCategoryGeneric" id="onlyCategoriesName">
-        <h2 class="title-categoryView">Categories</h2>
+        <h2 class="title-categoryView btnCategories">Categories</h2>
         <div class="section-movieCategory--buttonsName">
           <!-- <button id="id28" class="category-title">Action</button> -->
         </div>
@@ -75,8 +81,8 @@
       <!-- POPULAR SCROLL --->
       <section class="section-movieCategory movieCategoryGeneric" id="container-popular">
         <div class="section-movieCategory--name">
-          <h2 class="title-categoryView">Popular</h2>
-          <button class="btnShowPopular">SEE ALL</button>
+          <h2 class="title-categoryView titlePopular">Popular</h2>
+          <button class="btnShowPopular morePopular">SEE ALL</button>
         </div>
         <div class="section-movieCategory--scroll popularPreview">
           <!-- <article class="movieCategory--imgName">
@@ -88,8 +94,8 @@
       <!-- UPCOMING SCROLL --->     
       <section class="section-movieCategory movieCategoryGeneric" id="container-upcoming">
         <div class="section-movieCategory--name">
-          <h2 class="title-categoryView">Upcoming</h2>
-          <button class="btnShowUpcoming">SEE ALL</button>
+          <h2 class="title-categoryView titleUpcoming">Upcoming</h2>
+          <button class="btnShowUpcoming moreUpcoming">SEE ALL</button>
         </div>
         <div class="section-movieCategory--scroll upcomingPreview">
           <!-- <article class="movieCategory--imgName">
@@ -118,7 +124,7 @@
       <!-- MOVIE DETAILS--->     
       <section id="movieDetail" class="movieDetail-container inactive">
         <div class="movieDetail-infoContainer">
-          <img class="imgMovieDetail" src="./img/image1.png" alt="" />
+          <img class="imgMovieDetail" alt="" />
 
           <section class="movieDetail-overageTitleOverview">
             <div class="movieDetail-firstInfo">
@@ -152,6 +158,20 @@
 
           </div>
         </article>
+      </section>
+
+      <!-- MOVIE LIKED--->     
+      <section id="liked" class="liked-container section-movieCategory">
+        <h2 class="liked-title">Favorite movies</h2>
+        <div class="liked-articles">
+          <!-- <article class="movieCategory--imgName">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </article> -->
+        </div>
       </section>
     </main>
 
