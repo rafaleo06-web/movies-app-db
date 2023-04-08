@@ -133,6 +133,7 @@ function homePage() {
       liUpcoming.innerHTML = "Upcoming";
       btnBack.innerHTML = "Go Back";
       btnTopRatedCategory.innerHTML='Top Rated'
+      titleLogo.innerHTML = "Movie DB";
       break;
 
     case "es-ES":
@@ -151,6 +152,7 @@ function homePage() {
       liUpcoming.innerHTML = "Próximos";
       btnBack.innerHTML = "Retroceder";
       btnTopRatedCategory.innerHTML='Más Valorados'
+      titleLogo.innerHTML = "Películas DB";
       break;
 
     case "fr":
@@ -169,6 +171,7 @@ function homePage() {
       liUpcoming.innerHTML = "Prochaines";
       btnBack.innerHTML = "Dos";
       btnTopRatedCategory.innerHTML='Les plus notés'
+      titleLogo.innerHTML = "Films DB";
       break;
 
     case "pt-BR":
@@ -187,6 +190,7 @@ function homePage() {
       liUpcoming.innerHTML = "Próximo";
       btnBack.innerHTML = "Voltar";
       btnTopRatedCategory.innerHTML='Mais votado'
+      titleLogo.innerHTML = "Filmes DB";
       break;
 
   }
